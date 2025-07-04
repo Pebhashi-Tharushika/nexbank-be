@@ -30,7 +30,7 @@ public class JwtRequestFilter extends OncePerRequestFilter {
             try {
                 final Optional<String> username = jwtUtil.extractUsername(jwt);
                 if (username.isPresent()) {
-                    List<GrantedAuthority> authorities = jwtUtil.validateToken(jwt);
+                    final List<GrantedAuthority> authorities = jwtUtil.validateToken(jwt);
                     if (!authorities.isEmpty()) {
                         final UsernamePasswordAuthenticationToken authenticationToken =
                                 new UsernamePasswordAuthenticationToken(username.get(), null, authorities);
