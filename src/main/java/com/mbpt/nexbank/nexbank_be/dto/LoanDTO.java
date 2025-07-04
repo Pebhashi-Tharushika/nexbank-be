@@ -7,9 +7,8 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class AccountDTO {
-    private Integer accountNumber;
-    private String name;
-    private String branch;
-    private double balance;
+public class LoanDTO {
+    private Integer loanId;
+    private String loanType;
+    private Double loanAmount;
 }
