@@ -10,6 +10,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class GoldDTO {
     private Integer goldId;
-    private int weight;
-    private double price;
+    private Integer weight;
+    private Double price;
 }

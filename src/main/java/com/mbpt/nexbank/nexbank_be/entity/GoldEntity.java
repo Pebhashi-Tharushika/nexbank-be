@@ -17,8 +17,9 @@ public class GoldEntity {
     private Integer goldId;
 
     @Column(name = "weight")
-    private int weight;
+    private Integer weight;
 
     @Column(name = "price")
     private Double price;
+
 }
