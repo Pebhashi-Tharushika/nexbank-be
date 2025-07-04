@@ -8,4 +8,5 @@ import java.util.List;
 @Service
 public interface LoanService {
     public List<LoanDTO> getAllLoans();
+    public void deleteLoanById(Integer loanId);
 }

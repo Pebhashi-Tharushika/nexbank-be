@@ -16,11 +16,17 @@ public class LoanServiceImpl implements LoanService {
     @Autowired
     private LoanRepository loanRepository;
 
+    @Override
     public List<LoanDTO> getAllLoans() {
         List<LoanEntity> loanEntityList = loanRepository.findAll();
         return loanEntityList.stream()
                 .map(
                         entity -> new LoanDTO(entity.getLoanId(), entity.getLoanType(), entity.getLoanAmount())
                 ).collect(Collectors.toList());
+    }
+
+    @Override
+    public void deleteLoanById(Integer loanId) {
+        loanRepository.deleteById(loanId);
     }
 }
